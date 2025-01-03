@@ -33,16 +33,15 @@ draw = function(){
   ellipse(rightX+62, 100, 70, 60);
   ellipse(rightX-62, 100, 70, 60);
   
-  leftX=leftX-4;
-  rightX=rightX+2;
-  sunRadius=sunRadius+2;
+  leftX += 2;
+  rightX -= 2;
+  sunRadius += 2;
   
-  if(leftX < -100){
-leftX = 600;
-sunRadius=100;
-}
-
-  
+  if(leftX > 600){
+    leftX = 200;
+    rightX = 250;
+    sunRadius = 100;
+  }
 }
 
 
